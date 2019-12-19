@@ -2,7 +2,7 @@ package book.chapter4.control.page130_131;
 
 import java.util.ArrayList;
 
-public class Exercise4simpleNumb {
+public class Exercise4PrimeNumb {
     public static void main(String[] args) {
 
 //        for (int i = 2; i < 100; i++) {
