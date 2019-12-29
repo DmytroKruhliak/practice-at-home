@@ -5,18 +5,9 @@ import java.util.ArrayList;
 public class Exercise4PrimeNumb {
     public static void main(String[] args) {
 
-//        for (int i = 2; i < 100; i++) {
-//            for (int j = 2; j < 100; j++) {
-//                if (i == 2) break;
-//                if ((i % j == 0) && (i != j)) {
-//                    break;
-//                } else {
-//                    System.out.println(i);
-//                    break;
-//                }
-//            }
-//        }
         getPrimeNumbList(100);
+        System.out.println();
+
     }
 
     private static void getPrimeNumbList(int limit) {
@@ -29,7 +20,7 @@ public class Exercise4PrimeNumb {
 
         for (int i = 2; i < limit; i++) {
             flag = 0;
-            for (int j = 2; j < Math.sqrt(i); j++) {
+            for (int j = 2; j <= Math.sqrt(i); j++) {
                 if (i % j == 0) {
                     flag++;
                     break;
@@ -41,9 +32,10 @@ public class Exercise4PrimeNumb {
         }
 
         for (int p : primeList) {
-            System.out.println(p);
+            System.out.print(p + " ");
         }
     }
+
 
 }
 
