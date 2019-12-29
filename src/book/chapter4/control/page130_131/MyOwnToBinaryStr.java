@@ -2,8 +2,7 @@ package book.chapter4.control.page130_131;
 
 public class MyOwnToBinaryStr {
     public static void main(String[] args) {
-        int d = 9;
-        System.out.println(Integer.toBinaryString(d).length());
+        int d = Integer.MAX_VALUE;
         System.out.println(Integer.toBinaryString(d));
         System.out.println(getBinaryRepresentation(d));
 
@@ -11,8 +10,10 @@ public class MyOwnToBinaryStr {
 
     public static String getBinaryRepresentation(int num) {
         String result = "";
-        for (int i = 0; i <= Integer.toBinaryString(num).length(); i++) {
-            result += ((num & 1 << i) == 1) ? "1" : "0";
+        int maxDigit = Integer.toBinaryString(num).length();
+
+        for (int i = maxDigit-1; i >= 0; i--) {
+            result += ((num & 1 << i) >= 1) ? "1" : "0";
         }
         return result;
     }
